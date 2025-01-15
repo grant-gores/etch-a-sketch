@@ -37,3 +37,18 @@ function createGrid(size) {
 // Create initial grid
 createGrid(gridSize);
 
+// add button logic to resize grid
+const resizeButton = document.querySelector(".resize-button");
+
+resizeButton.addEventListener("click", () =>{
+    newSize = +prompt("Enter a number to resize the grid!");
+    if(Number.isInteger(newSize) && newSize >=1 && newSize <=100){
+        createGrid(newSize);
+    }
+    else{
+        return alert("enter an integer between 1 and 100 please!");
+    }
+})
+
+
+
