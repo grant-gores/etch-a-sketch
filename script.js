@@ -29,7 +29,8 @@ function createGrid(size) {
     // Add hover effect
     divs.forEach(div => {
         div.addEventListener("mouseenter", () => {
-            div.style.backgroundColor = "blue";
+            let hue = 'rgb(' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ',' + (Math.floor(Math.random() * 256)) + ')';
+            div.style.backgroundColor = hue;
         });
     });
 }
